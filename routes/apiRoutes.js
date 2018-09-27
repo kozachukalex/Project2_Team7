@@ -1,5 +1,7 @@
 var db = require("../models");
-var _ = require("lodash");
+
+//Commented out lodash as it is not currently in use
+// var _ = require("lodash");
 
 module.exports = function(app) {
   // Get all Lesson Plans from a given subject

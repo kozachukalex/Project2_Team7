@@ -25,9 +25,10 @@ module.exports = function(app) {
   // If a user who is not logged in tries to access this route they will be redirected to the signup page
 
   // the "/members" is essentially the homepage
-  app.get("/members", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/members.html"));
-  });
+  // Not currently being used
+  // app.get("/members", function(req, res) {
+  //   res.sendFile(path.join(__dirname, "../public/members.html"));
+  // });
 
   //example from starter files, will not need
   app.get("/example/:id", isAuthenticated, function(req, res) {
@@ -39,11 +40,12 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/profile.html"));
   });
   //Routes to display all lesson plan params selected using one html file
+  //Now the 'homepage'
   app.get("/members/lessons/*", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/lessons.html"));
   });
-
-  app.get("/members/plan/*", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/plan.html"));
-  });
+  // Plan not currently being used. Replaced multiple HTMLs with modals instead
+  // app.get("/members/plan/*", function(req, res) {
+  //   res.sendFile(path.join(__dirname, "../public/plan.html"));
+  // });
 };
