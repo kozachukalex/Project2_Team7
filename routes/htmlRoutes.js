@@ -23,11 +23,11 @@ module.exports = function(app) {
 
   // Here we've add our isAuthenticated middleware to this route.
   // If a user who is not logged in tries to access this route they will be redirected to the signup page
-
-  // the "/members" is essentially the homepage
-  app.get("/members", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/members.html"));
-  });
+  
+  // /members not being used at this time
+  // app.get("/members", function(req, res) {
+  //   res.sendFile(path.join(__dirname, "../public/members.html"));
+  // });
 
   //example from starter files, will not need
   app.get("/example/:id", isAuthenticated, function(req, res) {
@@ -43,7 +43,8 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/lessons.html"));
   });
 
-  app.get("/members/plan/*", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/plan.html"));
-  });
+  // /members/plans not being used at this time.
+  // app.get("/members/plan/*", function(req, res) {
+  //   res.sendFile(path.join(__dirname, "../public/plan.html"));
+  // });
 };
